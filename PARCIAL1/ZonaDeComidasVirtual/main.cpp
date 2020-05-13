@@ -98,29 +98,34 @@ void Producto_base::guardar(map<int,vector<Producto_base>> inventario){
     }
     fichero.close();                                                        //Se cierra el archivo
 }
-
-
 map<int,vector<Producto_base>> Producto_base::agregar_inventario(map<int,vector<Producto_base>> inventario){
+
+    ///Ésta función le permite al administrador agregar NUEVO inventario a la base de datos                                 ///
+    ///La función le va pidiendo al administrador los que se requiere para llenar el mapa                                   ///
+    ///La estructura que se maneja es: map<int,vector<Producto_base>>                                                       ///
+    ///donde Producto_base es una clase que contiene la siguiente estructura: nombre, tipodecantidad, cantidad, costoX1     ///
+    ///Para el nuevo inventario crea un objeto de la clase Producto_base y se van agregando los atributos que éste requiere ///
+    ///cuando se termina de adjuntar todos los atributos, Producto_base se almacena en el mapa como si fuese un vector      ///
 
     unsigned short int indice = (inventario.size()+1);
     unsigned short int continuar;
     unsigned short int aux_tipodecantidad;
 
     do{
-        Producto_base elemento;
+        Producto_base elemento;                                                                                     //Se crea un objeto de la clase Producto_base
         cout << "\n\n.....................................NUEVOS PRODUCTOS.....................................";
         cout << "\nIngrese el nombre del nuevo producto: ";
-        cin >> elemento.nombre;
+        cin >> elemento.nombre;                                                                                     //Se le da el atributo nombre al objeto anteriormente declarado
 
         do{
             cout << "Ingrese el numero del tipo de cantidad ((1)->unidades   (2)->gramos   (3)->mililitros): ";
-            cin >> aux_tipodecantidad;
-            if(aux_tipodecantidad==1 or aux_tipodecantidad==2 or aux_tipodecantidad==3)
+            cin >> aux_tipodecantidad;                                                                              //Se le da el valor que debería ir en tipodecantidad para poder evaluarlo antes de proceder a entregarle el valor al atributo del objeto 'elemento'
+            if(aux_tipodecantidad==1 or aux_tipodecantidad==2 or aux_tipodecantidad==3)                             //Se evalua si cumple con un valor en el parametro dado
                 elemento.tipodecantidad=aux_tipodecantidad;
-        }while(aux_tipodecantidad>3 or aux_tipodecantidad==0);
+        }while(aux_tipodecantidad>3 or aux_tipodecantidad==0);                                                      //Se continua pidiendo el valor si el valor ingresado ha sido erroneo
 
         cout << "Ingrese la cantidad: ";
-        cin >> elemento.cantidad;
+        cin >> elemento.cantidad;                                                                                   //Se le da el cantidad nombre al objeto elemento
 
         cout << "\n-----------------ACLARACION-----------------\n";
         cout << "El costo se ingresa por el valor de 1 unidad\n";
@@ -128,7 +133,7 @@ map<int,vector<Producto_base>> Producto_base::agregar_inventario(map<int,vector<
         cout << "que se ingreso anteriormente.";
         cout << "\n--------------------------------------------\n";
         cout << "Ingrese el costo: ";
-        cin >> elemento.costoX1;
+        cin >> elemento.costoX1;                                                                                    //Se le da el cantidad costoX1 al objeto elemento
 
         inventario[indice].push_back(elemento);
         cout << "..........................................................................................\n\n";
@@ -138,16 +143,23 @@ map<int,vector<Producto_base>> Producto_base::agregar_inventario(map<int,vector<
             cin >> continuar;
             if(continuar>1)
                 cout << "Numero no valido.\n";
-        }while(continuar>1);
+        }while(continuar>1);                                                            //Se evalua si el valor ingresado por el usuario cumple con los parametros
         indice++;
 
     }while (continuar==1);
-    return inventario;
+    return inventario;                                                                  //Se retorna un mapa con el inventario
 }
 map<int,vector<Producto_base>> Producto_base::abrir_inventario(){
 
+    ///Ésta función itera sobre la base de datos que contiene todo el inventario                                        ///
+    ///Durante la iteración, ésta va asignando cada dato al indice(clave del mapa) o a los atributos del objeto         ///
+    ///tipo clase Producto_base, en ésta caso el objeto se llama 'elemento'                                             ///
+    ///La estructura que se maneja es: map<int,vector<Producto_base>>                                                   ///
+    ///donde Producto_base es una clase que contiene la siguiente estructura: nombre, tipodecantidad, cantidad, costoX1 ///
+
+
     map<int,vector<Producto_base>> inventario;
-    Producto_base elemento;
+    Producto_base elemento;                                                 //Se declara un objeto de la clase Producto_base
     unsigned short int indice;
 
     ifstream fichero;                                                         //Abre el archivo en modo lectura
@@ -158,7 +170,8 @@ map<int,vector<Producto_base>> Producto_base::abrir_inventario(){
         exit(1);
     }
 
-    while(!fichero.eof()){
+    while(!fichero.eof()){                                                  //Se itera mientras que no se haya llegado al final del archivo
+                                                                            //Se va asignando los valores encontrados en el archivo, cada valor va hasta antes de encontrar un salto de linea o un espacio
         fichero >> indice;
         fichero >> elemento.nombre;
         fichero >> elemento.tipodecantidad;
@@ -167,7 +180,7 @@ map<int,vector<Producto_base>> Producto_base::abrir_inventario(){
         inventario[indice].push_back(elemento);
     }
     fichero.close();                                                        //Se cierra el archivo
-    return inventario;
+    return inventario;                                                      //Se retorna un mapa con el contenido de la información recolectada del archivo
 }
 
 
@@ -190,14 +203,13 @@ map<int,vector<Producto_base>> Producto_base::abrir_inventario(){
 
 int main()
 {
-    /*//Check de funciones//
+    //Check de funciones//
         Producto_base elementos;
         map<int,vector<Producto_base>> inventario;
         inventario = elementos.agregar_inventario(inventario);
         elementos.guardar(inventario);
-        abrir_inventario();
-    //- - - - - - - - - - - - - - - - - - - - -*/
+
+        //abrir_inventario();
+    //- - - - - - - - - - - - - - - - - - - - -
 
 }
-
-
