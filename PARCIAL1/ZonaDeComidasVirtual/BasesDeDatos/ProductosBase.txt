@@ -1,3 +1,4 @@
-1 pan 1 5 4294967281
-2 salchicha 1 10 12
-3 miel 2 4294967287 12
+1 nachos 2 150 1500
+2 pan 1 16 1200
+3 tocineta 2 30 3000
+4 pancito 1 50 1200
