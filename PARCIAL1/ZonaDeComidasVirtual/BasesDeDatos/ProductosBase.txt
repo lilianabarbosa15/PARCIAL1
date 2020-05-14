@@ -1,4 +1,10 @@
-1 nachos 2 150 1500
-2 pan 1 16 1200
-3 tocineta 2 30 3000
-4 pancito 1 50 1200
+1 { nachos } 2 150 1500
+2 { pan } 1 16 1200
+3 { tocineta } 2 30 3000
+4 { pancito } 1 50 1200
+5 { tomate } 2 15 500
+6 { lechuga } 2 16 450
+7 { perro } 1 15 100
+8 { uvas pasas } 2 1562 1000
+9 { salsa de tomate } 2 150 15846
+10 { pasta de tomate } 3 15 12
