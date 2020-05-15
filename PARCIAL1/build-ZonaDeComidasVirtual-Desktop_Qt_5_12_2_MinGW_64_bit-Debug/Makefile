@@ -222,6 +222,7 @@ Makefile: ../ZonaDeComidasVirtual/ZonaDeComidasVirtual.pro ../../QT/5.12.2/mingw
 		../../QT/5.12.2/mingw73_64/mkspecs/features/qt_config.prf \
 		../../QT/5.12.2/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		../../QT/5.12.2/mingw73_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../QT/5.12.2/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		../../QT/5.12.2/mingw73_64/mkspecs/features/toolchain.prf \
 		../../QT/5.12.2/mingw73_64/mkspecs/features/default_pre.prf \
@@ -400,6 +401,7 @@ Makefile: ../ZonaDeComidasVirtual/ZonaDeComidasVirtual.pro ../../QT/5.12.2/mingw
 ../../QT/5.12.2/mingw73_64/mkspecs/features/qt_config.prf:
 ../../QT/5.12.2/mingw73_64/mkspecs/win32-g++/qmake.conf:
 ../../QT/5.12.2/mingw73_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../QT/5.12.2/mingw73_64/mkspecs/features/exclusive_builds.prf:
 ../../QT/5.12.2/mingw73_64/mkspecs/features/toolchain.prf:
 ../../QT/5.12.2/mingw73_64/mkspecs/features/default_pre.prf:

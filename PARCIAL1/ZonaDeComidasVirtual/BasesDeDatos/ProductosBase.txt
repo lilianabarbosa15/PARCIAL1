@@ -1,10 +1,12 @@
-1 { nachos } 2 150 1500
-2 { pan } 1 16 1200
-3 { tocineta } 2 30 3000
-4 { pancito } 1 50 1200
-5 { tomate } 2 15 500
-6 { lechuga } 2 16 450
-7 { perro } 1 15 100
-8 { uvas pasas } 2 1562 1000
-9 { salsa de tomate } 2 150 15846
-10 { pasta de tomate } 3 15 12
+1 { palomitas } 2 8190 900
+2 { mantequilla } 2 9974 300
+3 { gaseosa } 3 8289 3000
+4 { vasos } 1 9982 500
+5 { recipiente grande } 1 9987 800
+6 { recipiente para perro } 1 9999 400
+7 { pan para perro } 1 15 1000
+8 { salchicha } 1 9991 1000
+9 { salsa de tomate } 3 9599 156
+10 { salsa de mostaza } 3 9599 12
+11 { nachos } 2 9999 100
+12 { queso } 3 9999 500

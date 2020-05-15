@@ -50,7 +50,13 @@ OBJECTS_DIR   = release
 SOURCES       = ..\ZonaDeComidasVirtual\main.cpp 
 OBJECTS       = release/main.o
 
-DIST          =   ..\ZonaDeComidasVirtual\main.cpp
+DIST          =  Administrador.h \
+		Funciones.h \
+		Metodos.h \
+		Producto_bases.h \
+		Producto_venta.h \
+		Traduccion.h \
+		Ventas.h ..\ZonaDeComidasVirtual\main.cpp
 QMAKE_TARGET  = ZonaDeComidasVirtual
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = ZonaDeComidasVirtual.exe
@@ -98,7 +104,13 @@ compiler_clean:
 
 ####### Compile
 
-release/main.o: ../ZonaDeComidasVirtual/main.cpp 
+release/main.o: ../ZonaDeComidasVirtual/main.cpp ../ZonaDeComidasVirtual/Ventas.h \
+		../ZonaDeComidasVirtual/Producto_venta.h \
+		../ZonaDeComidasVirtual/Producto_bases.h \
+		../ZonaDeComidasVirtual/Funciones.h \
+		../ZonaDeComidasVirtual/Administrador.h \
+		../ZonaDeComidasVirtual/Metodos.h \
+		../ZonaDeComidasVirtual/Traduccion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\ZonaDeComidasVirtual\main.cpp
 
 ####### Install

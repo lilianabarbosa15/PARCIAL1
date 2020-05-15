@@ -1,3 +1,3 @@
-1 { cabum 2.0 } 20000 [ salsa de tomate , 150 pasta de tomate , 15 ]
-2 { cabum 1.0 } 2000 [ salsa de tomate , 100 pasta de tomate , 5 ]
-3 { macarena } 50000 [ pasta de tomate , 5 ]
+1 { Palomitas grandes con dos gaseosas } 20900 [ palomitas , 20 mantequilla , 5 gaseosa , 150 vasos , 2 recipiente grande , 1 ]
+2 { Perro caliente con gaseosa } 9200 [ gaseosa , 120 vasos , 1 pan , 1 salsa de tomate , 50 salsa de mostaza , 50 salchicha , 1 ]
+3 { Palomitas } 12000 [ recipiente grande , 1 palomitas , 100 ]
